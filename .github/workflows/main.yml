@@ -13,7 +13,7 @@ jobs:
       run:
         working-directory: ./app
     env:
-      NEXT_PUBLIC_BASE_PATH: /cnpp-website
+      NEXT_PUBLIC_BASE_PATH: /cnpp-stage
 
     strategy:
       matrix:
