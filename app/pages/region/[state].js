@@ -11,3 +11,24 @@ const state = () => {
 }
 
 export default state
+
+export const getStaticProps = () => {
+  return {
+    props: { StateData: StateData }
+  }
+}
+
+export const getStaticPaths = () => {
+  const states = Object.keys(StateData);
+
+  const paths = states.map(name => {
+    return {
+      params: { state: name }
+    }
+  })
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
